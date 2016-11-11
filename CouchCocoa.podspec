@@ -1,6 +1,6 @@
 {
   "name": "CouchCocoa",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": {
     "type": "Apache",
     "text": "Released under the Apache license, version 2.0."
@@ -15,7 +15,7 @@
   },
   "source": {
     "git": "https://github.com/laurence79/CouchCocoa.git",
-    "tag": "v1.0.2"
+    "tag": "v1.0.3"
   },
   "source_files": [
     "Couch",

@@ -148,6 +148,9 @@
 		27EF14B31396DD3B0052913E /* AddressesDemo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27EF14B21396DD3B0052913E /* AddressesDemo.xib */; };
 		27FA35E31623E25A007501CA /* CouchTouchDBDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 279CA780156FE4B700871563 /* CouchTouchDBDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27FA35E51623E27A007501CA /* CouchEmbeddedServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2783A0C4156D616800DC8692 /* CouchEmbeddedServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		294FE6201DD6257F009273B5 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 294FE61E1DD6257F009273B5 /* JSONKit.h */; };
+		294FE6211DD6257F009273B5 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 294FE61F1DD6257F009273B5 /* JSONKit.m */; };
+		294FE6231DD62588009273B5 /* CouchCocoa.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 294FE6221DD62588009273B5 /* CouchCocoa.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,6 +301,9 @@
 		27EF148B1396D8CC0052913E /* DemoAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAppController.m; sourceTree = "<group>"; };
 		27EF14B21396DD3B0052913E /* AddressesDemo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressesDemo.xib; sourceTree = "<group>"; };
 		27EFB7BD13CF66FD00FA1485 /* ShoppingDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "ShoppingDemo-Info.plist"; path = "Demo/ShoppingDemo-Info.plist"; sourceTree = SOURCE_ROOT; };
+		294FE61E1DD6257F009273B5 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		294FE61F1DD6257F009273B5 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		294FE6221DD62588009273B5 /* CouchCocoa.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CouchCocoa.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +379,7 @@
 		08FB7794FE84155DC02AAC07 /* Couch */ = {
 			isa = PBXGroup;
 			children = (
+				294FE6221DD62588009273B5 /* CouchCocoa.podspec */,
 				278B231E1391724E00DDD950 /* REST */,
 				08FB7795FE84155DC02AAC07 /* Couch */,
 				27DB821C14081FD000E57444 /* Model */,
@@ -391,6 +398,8 @@
 		08FB7795FE84155DC02AAC07 /* Couch */ = {
 			isa = PBXGroup;
 			children = (
+				294FE61E1DD6257F009273B5 /* JSONKit.h */,
+				294FE61F1DD6257F009273B5 /* JSONKit.m */,
 				278B22F1138F1F5F00DDD950 /* CouchServer.h */,
 				278B22F2138F1F5F00DDD950 /* CouchServer.m */,
 				27E9C61714A0EECC00F67966 /* CouchTouchDBServer.h */,
@@ -631,6 +640,7 @@
 				27CDEC3513C67D3500C979BB /* CouchResource.h in Headers */,
 				27DB82211408202E00E57444 /* CouchDynamicObject.h in Headers */,
 				27DB82251408225300E57444 /* CouchModel.h in Headers */,
+				294FE6201DD6257F009273B5 /* JSONKit.h in Headers */,
 				27AE23AD147C95D3005AAB52 /* CouchModelFactory.h in Headers */,
 				27CDEC3613C67D3500C979BB /* CouchCocoa.h in Headers */,
 				279276EE14215D5600002958 /* RESTBase64.h in Headers */,
@@ -874,6 +884,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294FE6231DD62588009273B5 /* CouchCocoa.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +1038,7 @@
 				27CDEC1C13C67D0300C979BB /* RESTCache.m in Sources */,
 				27CDEC1D13C67D0300C979BB /* RESTInternal.m in Sources */,
 				27CDEC1E13C67D0300C979BB /* CouchServer.m in Sources */,
+				294FE6211DD6257F009273B5 /* JSONKit.m in Sources */,
 				27CDEC1F13C67D0300C979BB /* CouchDatabase.m in Sources */,
 				27CDEC2013C67D0300C979BB /* CouchDocument.m in Sources */,
 				27CDEC2113C67D0300C979BB /* CouchRevision.m in Sources */,
