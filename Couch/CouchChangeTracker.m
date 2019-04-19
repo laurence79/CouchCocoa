@@ -35,17 +35,10 @@
     if (self) {
         if ([self class] == [CouchChangeTracker class]) {
             [self release];
-            if (mode == kContinuous && [databaseURL.scheme.lowercaseString hasPrefix: @"http"]) {
-                return (id) [[CouchSocketChangeTracker alloc] initWithDatabaseURL: databaseURL
-                                                                             mode: mode
-                                                                     lastSequence: lastSequence
-                                                                           client: client];
-            } else {
-                return (id) [[CouchConnectionChangeTracker alloc] initWithDatabaseURL: databaseURL
+            return (id) [[CouchConnectionChangeTracker alloc] initWithDatabaseURL: databaseURL
                                                                                  mode: mode
                                                                          lastSequence: lastSequence
                                                                                client: client];
-            }
         }
     
         _databaseURL = [databaseURL retain];
