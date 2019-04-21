@@ -41,6 +41,8 @@ typedef enum {
     NSError* _error;
 }
 
+- (id) initWithQuery: (CouchQuery*)query;
+
 /** The design document that contains this view. */
 @property (readonly) CouchDesignDocument* designDocument;
 
