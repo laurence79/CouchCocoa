@@ -276,6 +276,10 @@ static Class sJSONSerialization;
     if (!sJSONSerialization)
         return [obj JSONString];
 #endif
+    if ([obj isKindOfClass:[NSString class]]) {
+        return [NSString stringWithFormat:@"%@%@%@", @"\"", obj, @"\""];
+    }
+    
     NSData* data = [sJSONSerialization dataWithJSONObject: obj                                               
                                                   options: 0
                                                     error: NULL];

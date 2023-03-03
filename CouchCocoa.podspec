@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-version = '1.0.4'
+version = '1.0.6'
 
 s.name     = 'CouchCocoa'
 s.version  = version
