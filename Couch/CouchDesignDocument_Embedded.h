@@ -7,14 +7,29 @@
 //
 
 #import "CouchDesignDocument.h"
+
+/*  These declarations used to come from TouchDB.framework via #import <TouchDB/...>.
+    Nothing links TouchDB — it is a 32-bit, iOS 7 simulator-only build from 2012 — and
+    only the types below were ever needed from it, so they are reproduced here verbatim
+    from TD_View.h (map/reduce), TD_Database.h (filter) and TD_Database+Insertion.h
+    (validation). This header's public API is unchanged.
+    The forward declarations sit outside the #ifdef because the VALIDATIONBLOCK and
+    FILTERBLOCK macros below name both types in either branch. */
+
+@class TD_Revision;
+@protocol TD_ValidationContext;
+
 #ifdef COUCHCOCOA_IMPL
 typedef id TDMapBlock;
 typedef id TDReduceBlock;
 typedef id TD_FilterBlock;
 typedef id TD_ValidationBlock;
 #else
-#import <TouchDB/TD_Database+Insertion.h>
-#import <TouchDB/TD_View.h>
+typedef void (^TDMapEmitBlock)(id key, id value);
+typedef void (^TDMapBlock)(NSDictionary* doc, TDMapEmitBlock emit);
+typedef id (^TDReduceBlock)(NSArray* keys, NSArray* values, BOOL rereduce);
+typedef BOOL (^TD_FilterBlock)(TD_Revision* revision, NSDictionary* params);
+typedef BOOL (^TD_ValidationBlock)(TD_Revision* newRevision, id<TD_ValidationContext> context);
 #endif
 
 
